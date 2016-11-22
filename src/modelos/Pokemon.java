@@ -7,7 +7,7 @@ package modelos;
 
 /**
  *
- * @author awsilva
+ * @author Silvio
  */
 public class Pokemon {
     

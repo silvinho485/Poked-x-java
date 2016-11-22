@@ -9,7 +9,7 @@ import modelos.Tipo;
 
 /**
  *
- * @author awsilva
+ * @author Silvio
  */
 public class Teste {
     public static void main(String[] args) {
@@ -54,17 +54,19 @@ public class Teste {
         */
         
         int indice = 1;
-        
+        int quantia = pokemons.size();
         while(indice != 0){
-            System.out.println("PokeDéx:\nDigite o numero do Pokémon a consultar\n0 para encerrar.\nou 31 para listar todos\nNo momento estão cadastrados todos, até a posição 30\n");
+            System.out.println("PokeDéx:\nDigite o numero do Pokémon a consultar\n0 para encerrar.\n31 para listar todos\n32 para cadastrar um novo\nNo momento estão cadastrados todos, até a posição 30\n");
             indice = le.nextInt();
             if(indice == 0)
                 System.out.println("Saiu");
             else if(indice ==31){
                 for(Pokemon pokemon:pokemons)
                 pokemon.mostra();
-            }
-            else
+            }else if(indice == 32){
+                quantia += 1;
+                pokemons.add(new Pokemon(quantia, le.next(), new Tipo("Poison", ""), new Status(70, 62, 67, 55, 55)));
+            }else
                 pokemons.get(indice -1).mostra();
             
         }
