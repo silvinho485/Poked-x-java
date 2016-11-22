@@ -1,10 +1,8 @@
 package modelos;
 
-/**
- *
- * @author Silvio
- */
 public class PokemonUnico extends Pokemon {
+
+//unico a cadstrar. Herda todos os atributos e objetos.
     
     private String nick;
 

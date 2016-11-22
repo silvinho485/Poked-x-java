@@ -51,12 +51,13 @@ public class Teste {
         pokemons.add(new Pokemon(30, "Nidorina", new Tipo("Poison", ""), new Status(70, 62, 67, 55, 55)));
         
         /*
+        ACIMA O 'BANCO'POPULADO
         */
         
-        int indice = 1;
-        int quantia = pokemons.size();
+        int indice = 1; //AUXILIA NA SELEÇAO 
+        int quantia = pokemons.size(); //USADO PARA GUARDAR NA POSICAO CORRETO DO ARRAY
         while(indice != 0){
-            System.out.println("PokeDéx:\nDigite o numero do Pokémon a consultar\n0 - encerrar.\n100 - listar todos\n101 - cadastrar um novo\nNo momento estão cadastrados todos, até a posição 30\n");
+            System.out.println("PokeDéx:\nDigite o numero do Pokémon a consultar\n100 - listar todos\n101 - cadastrar um novo\nNo momento estão cadastrados todos, até a posição 30\n0 - Encerrar.");
             indice = le.nextInt();
             if(indice == 0)
                 System.out.println("Saiu");
@@ -64,8 +65,11 @@ public class Teste {
                 for(Pokemon pokemon:pokemons)
                 pokemon.mostra();
             }else if(indice == 101){
-                //quantia += 1;
-                System.out.println("Insira o nome e em seguida os dois tipos");
+                quantia += 1;
+                System.out.println("Insira o Nome e em seguida Tipo1 e Tipo2");
+                System.out.println("Aperte 'ENTER', para confirmar cada item cadastrado");
+                System.out.println("OBS: POR PADRAO TODOS OS NOVOS IRAO COMEÇAR COM STATUS PADROES");
+                //SERA RECOLHIDO AS INFORMAÇOES ABAIXO
                 pokemons.add(new Pokemon(quantia, le.next(), new Tipo(le.next(), le.next()), new Status(30, 30, 20, 35, 35)));
             }else
                 pokemons.get(indice -1).mostra();

@@ -6,6 +6,8 @@ package modelos;
  */
 public class Status {
     
+    //Objeto que recebe e controla os status
+    
     private int hp;
     private int ataque;
     private int ataqueEspecial;

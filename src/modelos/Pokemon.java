@@ -6,6 +6,8 @@ package modelos;
  */
 public class Pokemon {
     
+    //criação dos objetos
+    
     protected int numero;
     protected String nome;
     protected Tipo tipo;
@@ -17,6 +19,8 @@ public class Pokemon {
        this.tipo = tipo; 
        this.status = status; 
     }
+    
+    //regras de negocios
     
     public int getNumero() {
         return numero;
@@ -49,9 +53,9 @@ public class Pokemon {
     public void setStatus(Status status) {
         this.status = status;
     }
-    
+    //Forma como sera printada para o usuario
     public void mostra(){
-        System.out.println("Nome: "  + nome +"\nNum/Pos: " + numero + "\nTipo: " + tipo.getTipo1() + " " + tipo.getTipo2() + "\n" + status + "\n=========================");
+        System.out.println("Nome: "  + nome +"\nNum/Pos: " + numero + "\nTipo: " + tipo.getTipo1() + ", " + tipo.getTipo2() + "\n" + status + "\n=========================\n\n");
         //System.out.println(nome +" " + numero + " " + tipo.getTipo1() + " " + tipo.getTipo2() + " " + status);
     } 
 }

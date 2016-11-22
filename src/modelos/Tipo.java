@@ -4,6 +4,8 @@ package modelos;
  * @author Silvio
  */
 public class Tipo {
+   
+    //Objeto que controla os tipos
     
     protected  String tipo1;
     protected  String tipo2; 
