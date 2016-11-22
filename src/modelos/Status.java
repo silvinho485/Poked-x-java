@@ -67,7 +67,7 @@ public class Status {
 
     @Override
     public String toString(){
-        return hp + " " + ataque + " " + ataqueEspecial + " " + defesa + " " + defesaEspecial;
+        return "HP: " + hp + " Atk: " + ataque + " Def: " + ataqueEspecial + " SAtk: " + defesa + " SDef: " + defesaEspecial;
     }
     
 }

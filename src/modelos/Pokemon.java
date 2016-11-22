@@ -56,6 +56,7 @@ public class Pokemon {
     }
     
     public void mostra(){
-        System.out.println(nome +" " + numero + " " + tipo.getTipo1() + " " + tipo.getTipo2() + " " + status);
+        System.out.println("Nome: "  + nome +"\nNum/Pos: " + numero + "\nTipo: " + tipo.getTipo1() + " " + tipo.getTipo2() + "\n" + status + "\n=========================");
+        //System.out.println(nome +" " + numero + " " + tipo.getTipo1() + " " + tipo.getTipo2() + " " + status);
     } 
 }
