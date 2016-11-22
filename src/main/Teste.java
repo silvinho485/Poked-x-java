@@ -56,16 +56,17 @@ public class Teste {
         int indice = 1;
         int quantia = pokemons.size();
         while(indice != 0){
-            System.out.println("PokeDéx:\nDigite o numero do Pokémon a consultar\n0 para encerrar.\n31 para listar todos\n32 para cadastrar um novo\nNo momento estão cadastrados todos, até a posição 30\n");
+            System.out.println("PokeDéx:\nDigite o numero do Pokémon a consultar\n0 - encerrar.\n100 - listar todos\n101 - cadastrar um novo\nNo momento estão cadastrados todos, até a posição 30\n");
             indice = le.nextInt();
             if(indice == 0)
                 System.out.println("Saiu");
-            else if(indice ==31){
+            else if(indice ==100){
                 for(Pokemon pokemon:pokemons)
                 pokemon.mostra();
-            }else if(indice == 32){
+            }else if(indice == 101){
                 quantia += 1;
-                pokemons.add(new Pokemon(quantia, le.next(), new Tipo("Poison", ""), new Status(70, 62, 67, 55, 55)));
+                System.out.println("Insira o nome e em seguida os dois tipos");
+                pokemons.add(new Pokemon(quantia, le.next(), new Tipo(le.next(), le.next()), new Status(30, 30, 20, 35, 35)));
             }else
                 pokemons.get(indice -1).mostra();
             
