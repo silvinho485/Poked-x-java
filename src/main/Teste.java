@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import modelos.Pokemon;
+import modelos.PokemonUnico;
 import modelos.Status;
 import modelos.Tipo;
 
@@ -15,7 +16,6 @@ public class Teste {
     public static void main(String[] args) {
         
         Scanner le = new Scanner(System.in); 
-        
         
         List<Pokemon> pokemons = new ArrayList<Pokemon>();
        
@@ -64,7 +64,7 @@ public class Teste {
                 for(Pokemon pokemon:pokemons)
                 pokemon.mostra();
             }else if(indice == 101){
-                quantia += 1;
+                //quantia += 1;
                 System.out.println("Insira o nome e em seguida os dois tipos");
                 pokemons.add(new Pokemon(quantia, le.next(), new Tipo(le.next(), le.next()), new Status(30, 30, 20, 35, 35)));
             }else
